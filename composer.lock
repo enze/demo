@@ -1,0 +1,86 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5b193d47780f3df2ce345a0e1bb5db2d",
+    "packages": [
+        {
+            "name": "xb/base",
+            "version": "1.0.1-stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enze/xb.git",
+                "reference": "9b0173cc11efe7fc5ea7df0f60475de8e2855ea5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enze/xb/zipball/9b0173cc11efe7fc5ea7df0f60475de8e2855ea5",
+                "reference": "9b0173cc11efe7fc5ea7df0f60475de8e2855ea5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "xb\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "enze.wei",
+                    "email": "enzewei@gmail.com"
+                }
+            ],
+            "description": "base package of xbsoft",
+            "time": "2017-03-24T17:12:23+00:00"
+        },
+        {
+            "name": "xb/swoole",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enze/swoole.git",
+                "reference": "7b4d987f2085fe7d3200261da9cc723943058c80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enze/swoole/zipball/7b4d987f2085fe7d3200261da9cc723943058c80",
+                "reference": "7b4d987f2085fe7d3200261da9cc723943058c80",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "xb\\swoole\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "enze.wei",
+                    "email": "enzewei@gmail.com"
+                }
+            ],
+            "description": "php swoole",
+            "time": "2017-03-24T17:16:11+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">5.6.0"
+    },
+    "platform-dev": []
+}

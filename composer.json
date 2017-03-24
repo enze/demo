@@ -1,0 +1,17 @@
+{
+    "name": "xb/demo",
+    "description": "some demo of xbsoft",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "enze.wei",
+            "email": "enzewei@gmail.com"
+        }
+    ],
+    "require": {
+		"php" : ">5.6.0",
+    	"xb/base" : ">=1.0.0",
+		"xb/swoole" : ">=1.0.0"
+    }
+}
