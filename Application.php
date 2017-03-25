@@ -7,6 +7,8 @@ class Application {
 	
 	public $default = '';
 	
+	public $service = [];
+	
 	public function run() {
 		if (true === empty($this->module)) {
 			$this->module = $this->default;
@@ -16,7 +18,8 @@ class Application {
 		
 		$moduleName = 'demo\\modules\\' . $this->module;
 		$module = new $moduleName;
+		$module->service = $this->service;
 		
-		$module->run();
+		return $module->run();
 	}
 }

@@ -1,0 +1,28 @@
+#!/usr/bin/env /usr/local/bin/php
+<?php
+set_time_limit(0);
+
+defined('APP_ROOT') or define('APP_ROOT', __DIR__);
+defined('ETC_ROOT') or define('ETC_ROOT', APP_ROOT . '/etc');
+
+require_once APP_ROOT . '/vendor/autoload.php';
+require_once APP_ROOT . '/vendor/xb/base/Xb.php';
+
+$module = $argc > 2 ? $argv[1] : false;
+
+if ($argc > 2) {
+	array_shift($argv);
+	$module = array_shift($argv);
+} else {
+	echo "wrong args\n";
+	exit(-1);
+}
+
+$application = new demo\Application;
+
+$application->default = true === empty($module) ? 'message' : $module;
+
+$application->service = array_pop($argv);
+
+$code = $application->run();
+exit($code);
