@@ -1,9 +1,10 @@
 <?php
 namespace demo\modules\message;
 
-class Sms {
-	
-	private $_property = [];
+use demo\modules\Base;
+use demo\modules\base\Message as InterfaceMessage;
+
+class Sms extends Base implements InterfaceMessage {
 	
 	public function sendMessage($server, $taskId, $workerId, $data) {
 		$data = json_decode($data, true);
@@ -28,19 +29,5 @@ class Sms {
         $url .= http_build_query($args);
 		
 		echo file_get_contents($url);
-	}
-	
-	public function __get($name) {
-		if (true === isset($this->_property[$name])) {
-			return $this->_property[$name];
-		}
-		return null;
-	}
-	
-	public function __set($name, $value) {
-		if (true === isset($this->_property[$name])) {
-			return null;
-		}
-		$this->_property[$name] = $value;
 	}
 }

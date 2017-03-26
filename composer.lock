@@ -4,20 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b193d47780f3df2ce345a0e1bb5db2d",
+    "content-hash": "e9a00088b80f2ce77e6d21f5715c4926",
     "packages": [
         {
-            "name": "xb/base",
-            "version": "1.0.1-stable",
+            "name": "swiftmailer/swiftmailer",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enze/xb.git",
-                "reference": "9b0173cc11efe7fc5ea7df0f60475de8e2855ea5"
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enze/xb/zipball/9b0173cc11efe7fc5ea7df0f60475de8e2855ea5",
-                "reference": "9b0173cc11efe7fc5ea7df0f60475de8e2855ea5",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "time": "2017-02-13T07:52:53+00:00"
+        },
+        {
+            "name": "xb/base",
+            "version": "1.0.2-stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enze/xb.git",
+                "reference": "293b29457ca2cb5409307cb5b9d545a1054c2ec9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enze/xb/zipball/293b29457ca2cb5409307cb5b9d545a1054c2ec9",
+                "reference": "293b29457ca2cb5409307cb5b9d545a1054c2ec9",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +80,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "xb\\": "/"
+                    "xb\\": "vendor/xb/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -37,7 +91,7 @@
                 }
             ],
             "description": "base package of xbsoft",
-            "time": "2017-03-24T17:12:23+00:00"
+            "time": "2017-03-25T16:11:29+00:00"
         },
         {
             "name": "xb/swoole",

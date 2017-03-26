@@ -12,11 +12,12 @@
     "require": {
 		"php" : ">5.6.0",
     	"xb/base" : ">=1.0.0",
-		"xb/swoole" : ">=1.0.0"
+		"xb/swoole" : ">=1.0.0",
+		"swiftmailer/swiftmailer" : "*"
     },
 	"autoload" : {
 		"psr-4" : {
-			"demo\\" : "/"
+			"demo\\" : ""
 		}
 	}
 }
