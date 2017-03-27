@@ -11,8 +11,8 @@
     ],
     "require": {
 		"php" : ">5.6.0",
-    	"xb/base" : ">=1.0.0",
-		"xb/swoole" : ">=1.0.0",
+    	"xb/base" : ">=1.0.2",
+		"xb/swoole" : ">=1.0.2",
 		"xb/mailer" : ">=1.0.0"
     },
 	"autoload" : {
