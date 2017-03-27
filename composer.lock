@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9a00088b80f2ce77e6d21f5715c4926",
+    "content-hash": "b370a2cd904910c63a7f6ac199c04bf5",
     "packages": [
         {
             "name": "swiftmailer/swiftmailer",
@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "url": "https://files.phpcomposer.com/files/swiftmailer/swiftmailer/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e.zip",
                 "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
                 "shasum": ""
             },
@@ -70,7 +70,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enze/xb/zipball/293b29457ca2cb5409307cb5b9d545a1054c2ec9",
+                "url": "https://files.phpcomposer.com/files/enze/xb/293b29457ca2cb5409307cb5b9d545a1054c2ec9.zip",
                 "reference": "293b29457ca2cb5409307cb5b9d545a1054c2ec9",
                 "shasum": ""
             },
@@ -94,6 +94,43 @@
             "time": "2017-03-25T16:11:29+00:00"
         },
         {
+            "name": "xb/mailer",
+            "version": "1.0.0.stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enze/mailer.git",
+                "reference": "532f739d49e14add8e9baaffe01b5b12cd189d75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/enze/mailer/532f739d49e14add8e9baaffe01b5b12cd189d75.zip",
+                "reference": "532f739d49e14add8e9baaffe01b5b12cd189d75",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "swiftmailer/swiftmailer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "xb\\mailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "enze.wei",
+                    "email": "enzewei@gmail.com"
+                }
+            ],
+            "description": "xbsoft mailer use swift mailer",
+            "time": "2017-03-27T05:55:20+00:00"
+        },
+        {
             "name": "xb/swoole",
             "version": "1.0.0",
             "source": {
@@ -103,7 +140,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enze/swoole/zipball/7b4d987f2085fe7d3200261da9cc723943058c80",
+                "url": "https://files.phpcomposer.com/files/enze/swoole/7b4d987f2085fe7d3200261da9cc723943058c80.zip",
                 "reference": "7b4d987f2085fe7d3200261da9cc723943058c80",
                 "shasum": ""
             },
