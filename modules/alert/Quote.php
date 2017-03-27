@@ -36,7 +36,7 @@ class Quote extends Base implements InterfaceAlert {
 
 		$data = [
 			'type' => 'notify',
-			'phone' => '15902143887',
+			'phone' => 'xxxxxx',
 			'message' => '还有10分钟过期，共1',
 		];
 
