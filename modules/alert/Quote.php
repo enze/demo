@@ -1,6 +1,8 @@
 <?php
 namespace demo\modules\alert;
 
+use xb\swoole\Client;
+
 use demo\modules\Base;
 use demo\modules\base\Alert as InterfaceAlert;
 
@@ -12,12 +14,7 @@ class Quote extends Base implements InterfaceAlert {
 	
 	public function sendAlert($server, $taskId, $workerId, $data) {
 		$data = json_decode($data, true);
-		
-		echo time();
-		echo "\n";
 		$server->after($data['time'], function () use ($data) {
-			echo time();
-			echo "\n";
 			return $this->run($data);
 		});
 	}
@@ -34,28 +31,23 @@ class Quote extends Base implements InterfaceAlert {
 		
 		$phone = $this->_getPhoneByCreateId($data['createId']);
 
-		$data = [
-			'type' => 'notify',
-			'phone' => 'xxxxxx',
-			'message' => '还有10分钟过期，共1',
+		$message = [
+			'type' => 'register',
+			'phone' => 'xxxxx',
+			'message' => '还有10分钟过期，可爱吧！！',
 		];
 
-		$message = json_encode($data);
-
-		/*
-		 * 创建UDP连接
-		 */
-		$fp = stream_socket_client('tcp://127.0.0.1:8223', $errno, $errstr);
-		if (!$fp) {
-			echo "ERROR: $errno - $errstr<br />\n";
-		} else {
-			/*
-			 * 简单发送日志信息
-			 */
-			flock($fp, LOCK_EX);
-			fwrite($fp, $message);
-			flock($fp, LOCK_UN);
-			fclose($fp);
-		}
+		$message = json_encode($message);
+		
+		//for($i = 0; $i < 3; $i++) {
+			$client = new Client('sms', ETC_ROOT . '/client.ini');
+		
+			$client->boot();
+			if (!$client->isConnected()) {
+				$client->conn();
+			}
+			$client->send($message);
+			$client->close();
+			//}
 	}
 }
